@@ -1,6 +1,7 @@
 body {
 	margin          : 0;
 	background-color: #407107;
+	transition      : all 2s ease;
 }
 
 .contenedor {	
@@ -9,10 +10,43 @@ body {
 	position: relative;
 }
 
-.presentacion {
+.presentacion-1, .presentacion-2, 
+.presentacion-3, .presentacion-4 {
+	position          : absolute;
 	border            : 20px solid white;
 	height            : 400px;
 	-webkit-box-shadow: 3px 6px 16px -2px rgba(0,0,0,0.75);
 	-moz-box-shadow   : 3px 6px 16px -2px rgba(0,0,0,0.75);
 	box-shadow        : 3px 6px 16px -2px rgba(0,0,0,0.75);
+	-webkit-transition: opacity 1s ease-in-out;
+  	-moz-transition: opacity 1s ease-in-out;
+  	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {	
+	.presentacion-1 {
+		opacity: 0;
+	}
+	body {
+		background-color: #6DA42E;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.presentacion-2 {
+		opacity: 0;
+	}	
+	body {
+		background-color: #94D946;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.presentacion-3 {
+		opacity: 0;
+	}
+	body {
+		background-color: #D7F5B5;
+	}
 }
